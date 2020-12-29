@@ -1,0 +1,200 @@
+package pq;  
+  
+import java.util.Random;  
+import java.util.Scanner;  
+  
+//3.24  
+public class Main {  
+    public static void main(String[] args) {  
+        // Scanner input=new Scanner(System.in);  
+        // System.out.print("Enter a year: ");  
+        // int year=input.nextInt();  
+  
+        Random r = new Random();  
+        int ran1 = r.nextInt(52);// 0~52的随机数  
+        // System.out.println(ran1);//输出随机数  
+        while (ran1 == 0) {// 排除生成0的场合  
+            ran1 = r.nextInt(52);  
+        }  
+        if (ran1 >= 1 && ran1 <= 13) {  
+            System.out.print("The card you picked is ");  
+            switch (ran1) {  
+            case 1:  
+                System.out.print("Ace");  
+                break;  
+            case 2:  
+                System.out.print("2");  
+                break;  
+            case 3:  
+                System.out.print("3");  
+                break;  
+            case 4:  
+                System.out.print("4");  
+                break;  
+            case 5:  
+                System.out.print("5");  
+                break;  
+            case 6:  
+                System.out.print("6");  
+                break;  
+            case 7:  
+                System.out.print("7");  
+                break;  
+            case 8:  
+                System.out.print("8");  
+                break;  
+            case 9:  
+                System.out.print("9");  
+                break;  
+            case 10:  
+                System.out.print("10");  
+                break;  
+            case 11:  
+                System.out.print("Jack");  
+                break;  
+            case 12:  
+                System.out.print("Queen");  
+                break;  
+            case 13:  
+                System.out.print("King");  
+                break;  
+            }  
+            System.out.println(" of Clubs");  
+        } else if (ran1 >= 14 && ran1 <= 26) {  
+            System.out.print("The card you picked is ");  
+            ran1 -= 13;  
+            switch (ran1) {  
+            case 1:  
+                System.out.print("Ace");  
+                break;  
+            case 2:  
+                System.out.print("2");  
+                break;  
+            case 3:  
+                System.out.print("3");  
+                break;  
+            case 4:  
+                System.out.print("4");  
+                break;  
+            case 5:  
+                System.out.print("5");  
+                break;  
+            case 6:  
+                System.out.print("6");  
+                break;  
+            case 7:  
+                System.out.print("7");  
+                break;  
+            case 8:  
+                System.out.print("8");  
+                break;  
+            case 9:  
+                System.out.print("9");  
+                break;  
+            case 10:  
+                System.out.print("10");  
+                break;  
+            case 11:  
+                System.out.print("Jack");  
+                break;  
+            case 12:  
+                System.out.print("Queen");  
+                break;  
+            case 13:  
+                System.out.print("King");  
+                break;  
+            }  
+            System.out.println(" of Diamonds");  
+        } else if (ran1 >= 27 && ran1 <= 39) {  
+            System.out.print("The card you picked is ");  
+            ran1 -= 26;  
+            switch (ran1) {  
+            case 1:  
+                System.out.print("Ace");  
+                break;  
+            case 2:  
+                System.out.print("2");  
+                break;  
+            case 3:  
+                System.out.print("3");  
+                break;  
+            case 4:  
+                System.out.print("4");  
+                break;  
+            case 5:  
+                System.out.print("5");  
+                break;  
+            case 6:  
+                System.out.print("6");  
+                break;  
+            case 7:  
+                System.out.print("7");  
+                break;  
+            case 8:  
+                System.out.print("8");  
+                break;  
+            case 9:  
+                System.out.print("9");  
+                break;  
+            case 10:  
+                System.out.print("10");  
+                break;  
+            case 11:  
+                System.out.print("Jack");  
+                break;  
+            case 12:  
+                System.out.print("Queen");  
+                break;  
+            case 13:  
+                System.out.print("King");  
+                break;  
+            }  
+            System.out.println(" of Hearts");  
+        } else if (ran1 >= 40 && ran1 <= 52) {  
+            System.out.print("The card you picked is ");  
+            ran1 -= 39;  
+            switch (ran1) {  
+            case 1:  
+                System.out.print("Ace");  
+                break;  
+            case 2:  
+                System.out.print("2");  
+                break;  
+            case 3:  
+                System.out.print("3");  
+                break;  
+            case 4:  
+                System.out.print("4");  
+                break;  
+            case 5:  
+                System.out.print("5");  
+                break;  
+            case 6:  
+                System.out.print("6");  
+                break;  
+            case 7:  
+                System.out.print("7");  
+                break;  
+            case 8:  
+                System.out.print("8");  
+                break;  
+            case 9:  
+                System.out.print("9");  
+                break;  
+            case 10:  
+                System.out.print("10");  
+                break;  
+            case 11:  
+                System.out.print("Jack");  
+                break;  
+            case 12:  
+                System.out.print("Queen");  
+                break;  
+            case 13:  
+                System.out.print("King");  
+                break;  
+            }  
+            System.out.println(" of Spades");  
+        }  
+    }  
+}  
