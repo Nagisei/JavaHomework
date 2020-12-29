@@ -1,0 +1,19 @@
+import java.util.Scanner;  
+//3.27  
+  
+public class IntheTriangle {  
+    public static void main(String[] args) {  
+        Scanner input = new Scanner(System.in);  
+        System.out.print("Enter a point's x- and y-coordinates: ");  
+        double x = input.nextDouble();  
+        double y = input.nextDouble();  
+        double h = 0;  
+        h = x * 0.5 * (-1) + 100;  
+  
+        if (x <= 200 && y <= h) {  
+            System.out.println("The point is in the triangle");  
+        } else {  
+            System.out.println("The point is not in the triangle");  
+        }  
+    }  
+}
