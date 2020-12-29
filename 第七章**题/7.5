@@ -1,0 +1,35 @@
+import java.util.Scanner;  
+import java.util.Arrays;//排序头文件  
+//7.5  
+  
+public class Main {  
+    public static void main(String[] args) {  
+        System.out.println("Enter 10 numbers: ");  
+        java.util.Scanner input = new java.util.Scanner(System.in);  
+        int x = input.nextInt();  
+        int[] a = new int[10];  
+        a[0] = x;  
+        int i = 1;  
+        while (i <= 9) {  
+            x = input.nextInt();  
+            a[i] = x;  
+            i++;  
+        }  
+  
+        Arrays.sort(a, 0, 9);// 排序,a[],从0~9  
+  
+        int[] b = new int[10];  
+        b[0] = a[0];  
+        int j;  
+        for (i = 1, j = 0; i <= 9; i++) {  
+            if (b[j] != a[i]) {  
+                b[j + 1] = a[i];  
+                j++;  
+            }  
+        }  
+  
+        for (i = 0; i <= j; i++) {  
+            System.out.print(b[i] + " ");  
+        }  
+    }  
+} 
