@@ -1,0 +1,26 @@
+import java.util.Scanner;  
+import java.lang.*;  
+//3.29  
+  
+public class TwoO {  
+    public static void main(String[] args) {  
+        Scanner input = new Scanner(System.in);  
+        System.out.print("Enter circle1's center x-, y-coordinates, and radius: ");// 输入坐标  
+        double x1 = input.nextDouble();  
+        double y1 = input.nextDouble();  
+        double r1 = input.nextDouble();  
+        System.out.print("Enter circle2's center x-, y-coordinates, and radius: ");// 输入坐标  
+        double x2 = input.nextDouble();  
+        double y2 = input.nextDouble();  
+        double r2 = input.nextDouble();  
+        double n = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);  
+        n = Math.sqrt(n);  
+        if (n + r2 <= r1) {// 在内部  
+            System.out.println("circle2 is inside circle1");  
+        } else if (n + r2 > r1 && n - r2 < r1) {// 在右边  
+            System.out.println("circle2 overlaps circle1");  
+        } else {// 不重叠  
+            System.out.println("circle2 does not overlaps circle1");  
+        }  
+    }  
+}
