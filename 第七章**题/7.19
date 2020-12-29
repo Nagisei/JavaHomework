@@ -1,0 +1,47 @@
+import java.util.Scanner;  
+//7.19是否排好序了   
+//但是没有用boolean isSorted写   
+  
+public class Main {  
+    public static void main(String[] args) {  
+        System.out.print("Enter the size of the list: ");  
+        Scanner scan = new Scanner(System.in);  
+        int n = scan.nextInt();  
+        System.out.print("Enter the contents of the list: ");  
+        int[] arr = new int[n];  
+        int[] brr = new int[n];  
+        for (int k = 0; k < n; k++) {  
+            arr[k] = scan.nextInt();  
+            brr[k] = arr[k];  
+        }  
+        for (int i = arr.length - 1; i > 0; i--) {  
+            for (int j = 0; j < i; j++) {  
+                if (arr[j] > arr[j + 1])  
+                    swap(arr, j, j + 1);  
+            }  
+        }  
+        System.out.print("The list has " + n + " integers ");  
+        for (int m = 0; m < arr.length; m++) {  
+            System.out.print(" " + arr[m]);  
+        }  
+        System.out.println("");  
+        System.out.print("The list is ");  
+        int flag = 1;  
+        for (int k = 0; k < n; k++) {  
+            if (arr[k] != brr[k]) {  
+                flag = 0;  
+                break;  
+            }  
+        }  
+        if (flag != 1) {  
+            System.out.println("not sorted");  
+        } else  
+            System.out.println("already sorted");  
+    }  
+  
+    public static void swap(int arr[], int i, int j) {  
+        int t = arr[i];  
+        arr[i] = arr[j];  
+        arr[j] = t;  
+    }  
+}  
