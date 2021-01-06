@@ -1,0 +1,24 @@
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+//文件复制
+public class Main {
+	public static void main(String[] args) throws FileNotFoundException {
+		java.io.File file = new java.io.File("input.txt");
+		java.io.File file1 = new java.io.File("output.txt");//路径
+
+		try (java.io.PrintWriter output = new java.io.PrintWriter(file)) {
+			output.println("HelloWorld (<ゝω·)~☆");
+		}
+		Scanner input = new Scanner(file);
+		try (java.io.PrintWriter output1 = new java.io.PrintWriter(file1);) {
+			while (input.hasNext()) {
+				String x = input.nextLine();
+				output1.println(x);
+				System.out.println(x);
+			}
+		}
+
+		input.close();
+	}
+}
